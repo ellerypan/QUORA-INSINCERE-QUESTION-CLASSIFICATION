@@ -66,7 +66,7 @@ After the work above, the proportion of embedding found for vocabulary increased
 (Ensemble of embeddings is a feasible way for improvement: https://arxiv.org/pdf/1804.07983.pdf)
 - Concatenation 
 
-(The shape is two times larger than others and the time used for training is much longer, but it's good for training diverse models)
+(There are 600 dimensions and correspondingly, the time used for training is much longer, but it's good for training diverse models)
 
 ### Models
 
