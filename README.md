@@ -52,7 +52,7 @@ After the work above, the proportion of embedding found for vocabulary increased
 
 ### Embeddings
 
-There are 4 types of embeddings provided:
+**4 types of embeddings provided:**
 * GoogleNews-vectors-negative300
 * glove.840B.300d
 * paragram_300_sl999
@@ -60,7 +60,7 @@ There are 4 types of embeddings provided:
 
 *Note: For those words that have no pretrained embeddings, their embeddings would be randomly initialized with the same mean and standard deviation in that matrix.*
 
-After several experiments, I found the combinations of GLOVE and PARAGRAM achieved the best performance. 2 kinds of combination I used in this competition:
+**After several experiments, I found the combinations of GLOVE and PARAGRAM achieved the best performance. 2 kinds of combination I used in this competition:**
 - Weighted Average 
 
 (Ensemble of embeddings is a feasible way for improvement: https://arxiv.org/pdf/1804.07983.pdf)
@@ -69,7 +69,8 @@ After several experiments, I found the combinations of GLOVE and PARAGRAM achiev
 (The shape is two times larger than others and the time used for training is much longer, but it's good for training diverse models)
 
 ### Models
-4 various of architectures are adopted:
+
+**4 various of architectures are adopted:**
 - LSTM+GRU+CapsNet
 - GRU+2Poolings(Max and Avg)
 - LSTM+Attention+2Poolings(Max and Avg)
