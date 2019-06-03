@@ -19,7 +19,7 @@ How to deal with toxic content is one of the problems among the websites today. 
 - Process Misspells 
 - Clean Contractions
 
-After the work above, the proportion of embedding found for vocabulary vocab increased from 25% to 64%.
+After the work above, the proportion of embedding found for vocabulary increased from 25% to 64%.
 
 #### Feature Engineer
 - Sentence Length
