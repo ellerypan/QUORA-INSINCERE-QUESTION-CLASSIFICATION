@@ -10,6 +10,7 @@ How to deal with toxic content is one of the problems among the websites today. 
 
 ## Top 7% Solution (finished in 6416.2s)
 <img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
+Prediction was evaluated through F1-score. There were 50,000 test samples for generating public lb scores, but 300,000 samples for the private lb scores. So a little bit shakeup can be seen.
 
 ### Preprocess
 
@@ -45,8 +46,8 @@ There are 4 types of embeddings provided:
 Note: For those words that have no pretrained embeddings, their embeddings would be randomly initialized with the same mean and standard deviation in that matrix.
 
 After several experiments, I found the combinations of GLOVE and PARAGRAM achieved the best performance. 2 kinds of combination I used in this competition:
-- Weighted Average (Shape:(,300d), Ensemble of embeddings is a feasible way for improvement: https://arxiv.org/pdf/1804.07983.pdf)
-- Concatenation    (Shape:(,600d,), the shape is two times larger than before and the time used for training is much longer, but it's good for training diverse models )
+- Weighted Average (Ensemble of embeddings is a feasible way for improvement: https://arxiv.org/pdf/1804.07983.pdf)
+- Concatenation    (Shape is two times larger than others and the time used for training is much longer, but it's good for training diverse models)
 
 ### Models
 4 various of architectures are adopted:
