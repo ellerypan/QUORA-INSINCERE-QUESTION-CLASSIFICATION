@@ -23,7 +23,7 @@ Test Samples: 375,806 (28.77% of train samples)
 ### Evaluation
 <img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
 
-Prediction was evaluated on F1-score. There were 56,000 test samples selected for generating public lb scores, but 325,806 samples for calculating private lb scores. So a little bit shakeup can be seen.
+Prediction was evaluated on F1-score. There were 56,000 test samples selected for generating public lb scores, but 325,806 samples for calculating private lb scores. Therefore, how to avoid a huge shakeup is one of the problems that needs to be considered.
 
 ### Preprocess
 
