@@ -15,7 +15,7 @@ Training Samples: 1,306,122
 - Sincere questions: 1,225,312 (93.81%)
 - Insincere questions: 80,810 (6.19%)
 
-Test Samples: 375,806 (0.288% of train samples)
+Test Samples: 375,806 (28.77% of train samples)
 - Public Test: 56,000 (13.30%)
 - Private Test: 325,806 (86.70%)
 
