@@ -6,7 +6,7 @@ How to deal with toxic content is one of the problems among the websites today. 
 
 ## Challenges
 1. 2-hour kernel running time limitation, so how to let models converge in a short time but keep robust is the key.
-2. Without further preprocessing of text, on average, just 25% vocabulary have their corresponding embeddings. Many words are not presented in the training phase.
+2. Without further preprocessing of text, on average, just 25% of vocabulary has their corresponding embeddings. Many words are not presented in the training phase.
 
 ## Top 7% Solution (finished in 6416.2s)
 <img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
@@ -28,7 +28,7 @@ After the work above, the proportion of embedding found for vocabulary increased
 - Number of Words
 - Number of Unique Words
 - Number of Unique Words/Number of Words
-- Number of Sensetive Words
+- Number of Sensitive Words
 - Number of Toxic Words
 - Standardize Features
 
