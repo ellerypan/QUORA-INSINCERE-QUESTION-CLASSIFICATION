@@ -7,6 +7,7 @@ How to deal with toxic content is one of the problems among the websites today. 
 ## Challenges
 1. 2-hour kernel running time limitation, so how to let models converge in a short time but keep robust is the key.
 2. Without further preprocessing of text, on average, just 25% of vocabulary has their corresponding embeddings. Many words are not presented in the training phase.
+3. "Real" test samples are 6 times larger, I cannot fully trust the public lb score and should focus more on local performance.
 
 ## Top 7% Solution (finished in 6416.2s)
 
