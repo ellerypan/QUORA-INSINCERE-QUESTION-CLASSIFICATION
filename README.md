@@ -18,6 +18,7 @@ How to deal with toxic content is one of the problems among the websites today. 
 - Clean Numbers
 - Process Misspells 
 - Clean Contractions
+
 After the work above, the proportion of embedding found for vocabulary vocab increased from 25% to 64%.
 
 #### Feature Engineer
@@ -48,6 +49,7 @@ After several experiments, I found the combinations of GLOVE and PARAGRAM achiev
 - Concatenation    (Shape:(,600d,), the shape is two times larger than before and the time used for training is much longer, but it's good for training diverse models )
 
 ### Models
+4 various of architectures are adopted:
 - LSTM+GRU+CapsNet
 - GRU+2Poolings(Max and Avg)
 - LSTM+Attention+2Poolings(Max and Avg)
