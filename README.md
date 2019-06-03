@@ -8,7 +8,8 @@ How to deal with toxic content is one of the problems among the websites today. 
 1. 2-hour kernel running time limitation, so how to let models converge in a short time but keep robust is the key.
 2. Without further preprocessing of text, on average, just 25% vocabulary have their corresponding embeddings. Many words are not presented in the training phase.
 
-## Solution
+## Top 7% Solution (finished in 6416.2s)
+<img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
 
 ### Preprocess
 
@@ -30,7 +31,7 @@ After the work above, the proportion of embedding found for vocabulary vocab inc
 - Number of Toxic Words
 - Standardize Features
 
-
+#### Data Preparation
 - Tokenize Sentences+Paddings
 - Shuffling
 
@@ -43,14 +44,11 @@ There are 4 types of embeddings provided:
 Note: For those words that have no pretrained embeddings, their embeddings would be randomly initialized with the same mean and standard deviation in that matrix.
 
 After several experiments, I found the combinations of GLOVE and PARAGRAM achieved the best performance. 2 kinds of combination I used in this competition:
-- Weighted Average (300d, )
-- Concatenation
+- Weighted Average (Shape:(,300d), Ensemble of embeddings is a feasible way for improvement: https://arxiv.org/pdf/1804.07983.pdf)
+- Concatenation    (Shape:(,600d,), the shape is two times larger than before and the time used for training is much longer, but it's good for training diverse models )
 
-
-<img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
-This is the top7% solution using ensemble of 4 various architectures (finished in 6416.2s)
-
+### Models
 - LSTM+GRU+CapsNet
 - GRU+2Poolings(Max and Avg)
 - LSTM+Attention+2Poolings(Max and Avg)
-- CNN with filter_size = 3,4,5,10
+- CNN with filter_size 3,4,5,10
