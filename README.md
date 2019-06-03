@@ -9,7 +9,8 @@ How to deal with toxic content is one of the problems among the websites today. 
 2. Without further preprocessing of text, on average, just 25% vocabulary have their corresponding embeddings. Many words are not presented in the training phase.
 
 ## Solution
-This is the top7% solution(0.70363) using ensemble of 4 various architectures (finished in 6416.2s)
+<img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
+This is the top7% solution using ensemble of 4 various architectures (finished in 6416.2s)
 
 - LSTM+GRU+CapsNet
 - GRU+2Poolings(Max and Avg)
