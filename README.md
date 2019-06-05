@@ -9,9 +9,9 @@ How to deal with toxic content is one of the problems among the websites today. 
 2. Without further preprocessing of text, on average, just 25% of vocabulary has their corresponding embeddings. Many words are not presented in the training phase.
 3. "Real" test samples are 6 times larger, I cannot fully trust the public lb score and should focus more on local performance.
 
-## My Solution (finished in 6416.2s)
+# My Solution (finished in 6416.2s)
 
-### Data
+## Data
 Training Samples: 1,306,122 
 - Sincere questions: 1,225,312 (93.81%)
 - Insincere questions: 80,810 (6.19%)
@@ -20,14 +20,14 @@ Test Samples: 375,806 (28.77% of train samples)
 - Public Test: 56,000 (13.30%)
 - Private Test: 325,806 (86.70%)
 
-### Evaluation
+## Evaluation
 <img width="1259" alt="Screen Shot 2019-06-03 at 1 47 08 AM" src="https://user-images.githubusercontent.com/40588854/58788833-9656a380-85a1-11e9-8521-5d2162e1feb1.png">
 
 Prediction was evaluated on F1-score. There were 56,000 test samples selected for generating public lb scores, but 325,806 samples for calculating private lb scores. Therefore, how to avoid a huge shakeup is one of the problems that needs to be considered.
 
-### Preprocess
+## Preprocess
 
-#### Text Cleaning
+### Text Cleaning
 - Lower Case Letters and Remove Punctuations
 - Clean Numbers
 - Process Misspells 
@@ -35,7 +35,7 @@ Prediction was evaluated on F1-score. There were 56,000 test samples selected fo
 
 After the work above, the proportion of embedding found for vocabulary increased from 25% to 64%.
 
-#### Feature Engineer
+### Feature Engineer
 - Sentence Length
 - Number of Capital Letters
 - Number of Capital Letters/Sentence Length
@@ -46,11 +46,11 @@ After the work above, the proportion of embedding found for vocabulary increased
 - Number of Toxic Words
 - Standardize Features
 
-#### Sentence Preparation
+### Sentence Preparation
 - Tokenize Sentences+Paddings
 - Shuffling
 
-### Embeddings
+## Embeddings
 
 **4 types of embeddings provided:**
 * GoogleNews-vectors-negative300
@@ -68,7 +68,7 @@ After the work above, the proportion of embedding found for vocabulary increased
 
 (There are 600 dimensions and correspondingly, the time used for training is much longer, but it's good for training diverse models)
 
-### Models
+## Models
 
 **4 various of architectures are adopted:**
 - LSTM+GRU+CapsNet
